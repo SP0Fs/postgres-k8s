@@ -1,6 +1,13 @@
 auth:
+  username: spof
   existingSecret: postgres-auth
 
 architecture: replication
 
-replication: https://artifacthub.io/packages/helm/bitnami/postgresql?modal=values
+replication:
+  synchronous_commit: "on"
+  numSynchronousReplicas: 1
+  application_name: spof_pgsql
+
+persistence:
+  storageClass: ssd
