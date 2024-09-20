@@ -5,7 +5,7 @@ metadata:
   namespace: postgres
 spec:
   selector:
-    app: postgres
+    app.kubernetes.io/instance: postgres
   type: ClusterIP
   trafficDistribution: PreferClose
   sessionAffinity: ClientIP
