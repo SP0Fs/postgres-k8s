@@ -7,8 +7,7 @@ spec:
   selector:
     app.kubernetes.io/instance: postgres
   type: ClusterIP
-  trafficDistribution:
-    PreferClose: true
+  trafficDistribution: PreferClose
   sessionAffinity: ClientIP
   sessionAffinityConfig:
     clientIP:
