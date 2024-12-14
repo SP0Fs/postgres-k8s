@@ -11,3 +11,7 @@ replication:
 
 persistence:
   storageClass: ssd
+
+primary:
+  nodeSelector:
+    kubernetes.io/hostname: hp-elitedesk
